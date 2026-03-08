@@ -1,0 +1,274 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: #FFF5E1;
+    color: #333333;
+}
+/* ------------------Header ---------------------- */
+
+header{
+    padding: 15px 60px;
+}
+ 
+.container{
+    background-color: #FF4C29;
+}
+
+nav{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    background-color: #FF4C29;
+    color: #ffffff;
+    padding: 10px 5%;
+
+    box-shadow: 0 5px 10px rgba(231, 146, 146, 0.15);
+    z-index: 1000;
+    
+
+}
+
+.logo{
+    width: 78px;
+    border-radius: 50%;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #FFA500;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100px;
+}
+/* --------------Header Ends----------------------- */
+
+/* HERO SECTION */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: #FF4C29;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #FFA500;
+}
+
+.btn-secondary {
+  border: 2px solid #FF4C29;
+  color: #FF4C29;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #FF4C29;
+  color: white;
+}
+
+.hero-image img {
+  width: 500px;
+  max-width: 100%;
+}
+
+/* -----------Login Popup Starts------------------- */
+
+.login-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2000;
+}
+
+.login-box{
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-box input{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-box button{
+  width: 100%;
+  padding: 10px;
+  background: #FF4C29;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn{
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* -----------------------LOGIN POPUP Ends--------------------- */
+
+/* ----------------------Register Popup Starts---------------------- */
+.signup-popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2000;
+}
+
+.signup-box{
+  background: white;
+  padding: 30px;
+  width: 350px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.signup-box input{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.signup-box button{
+  width: 100%;
+  padding: 10px;
+  background: #FF4C29;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn{
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+/* -------------Register Popup Ends-------------------- */
+
+/* ------------Responsive for nav-------- */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+}
+
+/* -----------Responsive for Hero section------------------- */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+}
